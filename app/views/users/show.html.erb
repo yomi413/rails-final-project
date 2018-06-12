@@ -1,1 +1,5 @@
 <h1>Welcome, <%= @user.name %>!</h1>
+
+<p>Number of Registered Cars: <%= @user.cars.count %></p>
+
+<%= link_to "All Registered Cars", cars_path %> | <%= link_to "New Car", new_car_path %>
