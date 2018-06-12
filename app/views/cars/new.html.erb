@@ -1,0 +1,20 @@
+<h1>Register Your Vehicle</h1>
+
+<%= form_for @car do |f| %>
+  <strong>Make:</strong>
+  <%= f.text_field :make %><br></br>
+  
+  <strong>Model:</strong>
+  <%= f.text_field :model %><br></br>
+  
+  <strong>Year:</strong>
+  <%= f.number_field :year %><br></br>
+  
+  <strong>Color:</strong>
+  <%= f.text_field :color %><br></br>
+  
+  <strong>Size:</strong>
+  <%= f.text_field :size %><br></br>
+
+  <%= f.submit %>
+<% end %>
