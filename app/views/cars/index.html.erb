@@ -27,6 +27,15 @@
   </thead>
 
   <tbody>
+    <% @cars.each do |car| %>
+      <tr>
+        <td><%= car.make %></td>
+        <td><%= car.model %></td>
+        <td><%= car.year %></td>
+        <td><%= car.color %></td>
+        <td><%= car.size %></td>
+      </tr>
+    <% end %>
   </tbody>
 </table>
 
