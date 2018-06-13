@@ -1,4 +1,7 @@
+require 'pry'
+
 class CarsController < ApplicationController
+  
   def index
     @cars = Car.all
   end
@@ -8,7 +11,7 @@ class CarsController < ApplicationController
   end
 
   def create
-    @car = current_user.cars.build(car_params)
+    @car = Car.new(car_params)
 
     if @car.save
       redirect_to cars_path
