@@ -1,12 +1,14 @@
-<h1>Login to Your Account</h1>
+<h1>Existing User Log In</h1>
 
-<%= form_for @user do |f| %>
-  <strong>Email:</strong>
-  <%= f.text_field :email %><br></br>
+<%= form_tag('/session') do %>
+  
+  <%= label_tag :email, "Email:" %>
+  <%= text_field_tag :email %>
+  <br></br>
 
-  <strong>Password:</strong>
-  <%= f.text_field :password %><br></br>
+  <%= label_tag :password, "Password:" %>
+  <%= text_field_tag :password %>
+  <br></br>
 
-  <%= f.submit %>
-
+  <%= submit_tag "Log In" %>
 <% end %>
