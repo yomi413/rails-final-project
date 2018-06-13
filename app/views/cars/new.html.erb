@@ -1,20 +1,20 @@
 <h1>Register Your Vehicle</h1>
 
-<%= form_for @car do |f| %>
-  <strong>Make:</strong>
-  <%= f.text_field :make %><br></br>
+<%= form_tag('/cars', method: "post") do %>
+  <strong><%= label_tag :make, "Make:" %></strong>
+  <%= text_field_tag :make, @car.make %><br></br>
 
-  <strong>Model:</strong>
-  <%= f.text_field :model %><br></br>
+  <strong><%= label_tag :model, "Model:" %></strong>
+  <%= text_field_tag :model, @car.model %><br></br>
 
-  <strong>Year:</strong>
-  <%= f.number_field :year %><br></br>
+  <strong><%= label_tag :year, "Year:" %></strong>
+  <%= number_field_tag :year, @car.year %><br></br>
 
-  <strong>Color:</strong>
-  <%= f.text_field :color %><br></br>
+  <strong><%= label_tag :color, "Color:" %></strong>
+  <%= text_field_tag :color, @car.color %><br></br>
 
-  <strong>Size:</strong>
-  <%= f.text_field :size %><br></br>
+  <strong><%= label_tag :size, "Size:" %></strong>
+  <%= text_field_tag :size, @car.size %><br></br>
 
-  <%= f.submit %>
+  <%= submit_tag "Create Car" %>
 <% end %>
