@@ -1,0 +1,20 @@
+<h1>Edit Your Car</h1>
+
+<%= form_tag car_path(@car), method: "patch" do %>
+  <%= label_tag :make, "Make:" %>
+  <%= text_field_tag :make, @car.make %><br></br>
+
+  <%= label_tag :model, "Model:" %>
+  <%= text_field_tag :model, @car.model %><br></br>
+
+  <%= label_tag :year, "Year:" %>
+  <%= number_field_tag :year, @car.year %><br></br>
+
+  <%= label_tag :color, "Color:" %>
+  <%= text_field_tag :color, @car.color %><br></br>
+
+  <%= label_tag :size, "Size:" %>
+  <%= text_field_tag :size, @car.size %><br></br>
+
+  <%= submit_tag "Edit Car" %>
+<% end %>
