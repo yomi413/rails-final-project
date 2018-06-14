@@ -15,19 +15,19 @@
   <% end %>
 
 <%= form_tag('/cars', method: "post") do %>
-  <strong><%= label_tag :make, "Make:" %></strong>
+  <%= label_tag :make, "Make:" %>
   <%= text_field_tag :make, @car.make %><br></br>
 
-  <strong><%= label_tag :model, "Model:" %></strong>
+  <%= label_tag :model, "Model:" %>
   <%= text_field_tag :model, @car.model %><br></br>
 
-  <strong><%= label_tag :year, "Year:" %></strong>
+  <%= label_tag :year, "Year:" %>
   <%= number_field_tag :year, @car.year %><br></br>
 
-  <strong><%= label_tag :color, "Color:" %></strong>
+  <%= label_tag :color, "Color:" %>
   <%= text_field_tag :color, @car.color %><br></br>
 
-  <strong><%= label_tag :size, "Size:" %></strong>
+  <%= label_tag :size, "Size:" %>
   <%= text_field_tag :size, @car.size %><br></br>
 
   <%= submit_tag "Create Car" %>
