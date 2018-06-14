@@ -13,16 +13,25 @@ class SessionsController < ApplicationController
     session[:user_id] = @user.id
 
     render 'welcome/home'
-    # @user = User.find_by(email: params[:emal])
+  end
 
-    # if @user && @user.authenticate[params[:password]]
-    #   session[:user_id] = @user.id
-    #   redirect_to user_path(@user)
-    # end
+  def login
+    @user = User.find_by(email: params[:emal])
+
+    if @user && @user.authenticate(params[:password])
+      session[:user_id] = @user.id
+      redirect_to user_path(@user)
+    end
   end
 
   def destroy
     session.delete(:user_id)
     redirect_to root_path
+  end
+
+  private
+
+  def auth
+    request.env['omniauth.auth']
   end
 end
