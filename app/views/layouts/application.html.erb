@@ -30,8 +30,7 @@
           <a class="navbar-brand" href="<%= root_url %>"/>Home</a>
 
         <% if !logged_in? %>
-          <%= link_to "Sign Up", new_user_path %>
-          <%= link_to "Log In", session_path, class:"navbar-brand" %>
+          <%= link_to "Sign Up", new_user_path %> | <%= link_to "Log In", session_path %> | <%= link_to('Log in with Google!', '/auth/google_oauth2') %>
         <% end %>
 
         <% if logged_in? %>
