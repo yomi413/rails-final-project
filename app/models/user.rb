@@ -7,6 +7,6 @@ class User < ApplicationRecord
   validates :email, presence: true
 
   def first_name
-    self.name[0]
+    self.name.split[0]
   end
 end
