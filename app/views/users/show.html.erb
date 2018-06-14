@@ -11,7 +11,7 @@
   <ul>
     <% current_user.cars.each do |car| %>
       <li>
-        <%= car.make %> <%= car.model %> (<%= car.year %>)
+        <%= link_to car.your_car, car_path(car) %>
       </li><br>
     <% end %>
   </ul>
