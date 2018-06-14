@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root "welcome#home"
 
   get '/session', to: 'sessions#new'
-  post '/session', to: 'sessions#create'
+  post '/session', to: 'sessions#login'
   delete '/session', to: 'sessions#destroy'
 
   get '/auth/google_oauth2/callback', to: 'sessions#create'
