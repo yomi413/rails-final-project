@@ -5,4 +5,9 @@
   </div>
 </div>
 
-<%= link_to "Sign Up", new_user_path %> | <%= link_to "Login", session_path %>
+<% if session[:user_id] %>
+  <h1>Name: <%= @user.name %></h1>
+  <h2>Email: <%= @user.email %></h2>
+  <h2>Google UID: <%= @user.uid %></h2>
+  <img src="<%= @user.image %>">
+<% end %>
