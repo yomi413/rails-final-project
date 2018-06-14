@@ -9,17 +9,17 @@ class SessionsController < ApplicationController
       user.email = auth['info']['email']
       user.image = auth['info']['image']
     end
-
+  
     session[:user_id] = @user.id
 
     render 'welcome/home'
   end
 
   def login
-    @user = User.find_by(email: params[:emal])
+    @user = User.find_by(email: params[:email])
 
     if @user && @user.authenticate(params[:password])
-      session[:user_id] = @user.id
+      session[:user_id] = @user.id 
       redirect_to user_path(@user)
     end
   end
