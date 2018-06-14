@@ -24,6 +24,16 @@ class CarsController < ApplicationController
     @car = Car.find_by(id: params[:id])
   end
 
+  def edit
+    @car = Car.find_by(id: params[:id])
+  end
+
+  def update
+    @car = Car.find_by(id: params[:id])
+    @car.update(car_params)
+    redirect_to cars_path
+  end
+
   private
 
   def car_params
