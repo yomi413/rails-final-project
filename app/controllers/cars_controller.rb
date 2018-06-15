@@ -46,6 +46,6 @@ class CarsController < ApplicationController
   private
 
   def car_params
-    params.permit(:make, :model, :year, :color, :size)
+    params.permit(:make, :model, :year, :color, :size, parking_space_attributes: [:space_number])
   end
 end
