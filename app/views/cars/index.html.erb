@@ -18,22 +18,26 @@
 <table>
   <thead>
     <tr>
+      <th>Registered Owner</th>
       <th>Car Make</th>
       <th>Car Model</th>
       <th>Car Year</th>
       <th>Car Color</th>
       <th>Car Size</th>
+      <th>Parking Space Number</th>
     </tr>
   </thead>
 
   <tbody>
     <% @cars.each do |car| %>
       <tr>
+        <td><%= car.user.name %></td>
         <td><%= car.make %></td>
         <td><%= car.model %></td>
         <td><%= car.year %></td>
         <td><%= car.color %></td>
         <td><%= car.size %></td>
+        <td><%= car.parking_space.space_number %></td>
       </tr>
     <% end %>
   </tbody>
