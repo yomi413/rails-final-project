@@ -30,5 +30,13 @@
   <%= label_tag :size, "Size:" %>
   <%= text_field_tag :size, @car.size %><br></br>
 
+    <%= fields_for :parking_space_attributes do |ps| %>
+
+      <%= ps.label :space_number, "Parking Space Number:" %>
+      <%= ps.number_field :space_number %>
+
+    <% end %>
+    <br></br>
+
   <%= submit_tag "Create Car" %>
 <% end %>
