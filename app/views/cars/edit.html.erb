@@ -16,5 +16,12 @@
   <%= label_tag :size, "Size:" %>
   <%= text_field_tag :size, @car.size %><br></br>
 
+    <%= fields_for :parking_space_attributes do |ps| %>
+
+      <%= ps.label :space_number, "Parking Space Number:" %>
+      <%= ps.select :space_number, options_for_select((100..125).step(1).to_a.map{|space| ["#{space}", space]}), include_blank: true %>
+
+    <% end %>
+
   <%= submit_tag "Edit Car" %>
 <% end %>
