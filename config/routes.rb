@@ -5,8 +5,6 @@ Rails.application.routes.draw do
 
   root "welcome#home"
 
-  root "welcome#home"
-
   get '/session', to: 'sessions#new'
   post '/session', to: 'sessions#login', as: 'login'
   delete '/session', to: 'sessions#destroy'
