@@ -10,4 +10,14 @@ class User < ApplicationRecord
   def first_name
     self.name.split[0]
   end
+
+  # def self.find_or_create_from_auth_hash(auth)
+  #   where(uid: auth.uid).first_or_initialize.tap do |user|
+  #     user.uid = auth.uid
+  #     user.name = auth.info.name
+  #     user.email = auth.info.email
+  #     user.image = auth.info.image
+  #     user.save
+  #   end
+  # end
 end

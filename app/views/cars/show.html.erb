@@ -1,5 +1,5 @@
-<h4>Would you like to edit or delete this entry?</h4>
+<h2>Would you like to edit or delete this entry?</h2>
 
-<%= @car.your_car %><br></br>
+<h4><%= @car.your_car %></h4><br></br>
 
 <%= link_to "Edit Car", edit_car_path(@car) %> | <%= link_to "Delete Car", @car, :method => :delete %>
