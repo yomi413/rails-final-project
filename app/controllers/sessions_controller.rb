@@ -3,15 +3,6 @@ class SessionsController < ApplicationController
     @user = User.new
   end
 
-  # def create
-  #   @user = User.find_or_create_from_auth_hash(auth)
-  #   # binding.pry
-  #   if !@user.nil?
-  #     session[:user_id] = @user.id
-  #     render 'welcome/home'
-  #   end
-  # end
-
   def create
     @user = User.find_or_create_by(uid: auth['uid']) do |user|
       user.name = auth['info']['name']
@@ -19,10 +10,11 @@ class SessionsController < ApplicationController
       user.image = auth['info']['image']
     end
     # binding.pry
-  
-    session[:user_id] = @user.id
 
+    session[:user_id] = @user.id
+    
     render 'welcome/home'
+    
   end
 
   def login

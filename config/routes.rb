@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   resources :users
   resources :cars
 
-  resources :users do
-    resources :parking_spaces
-  end
+  # resources :users do
+  #   resources :parking_spaces
+  # end
 
   root "welcome#home"
 
