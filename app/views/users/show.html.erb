@@ -16,4 +16,14 @@
     <% end %>
   </ul>
 
+<p>Number of Parking Spaces: <%= @user.parking_spaces.count %>
+
+  <ul>
+    <% current_user.parking_spaces.each do |ps| %>
+      <li>
+        <%= ps.space_number %>
+      </li>
+    <% end %>
+  </ul>
+
 <%= link_to "All Registered Cars", cars_path %> | <%= link_to "New Car", new_car_path %> 
