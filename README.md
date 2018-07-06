@@ -1,6 +1,36 @@
-# README
+# RAILS FINAL PROJECT
 
-This README would normally document whatever steps are necessary to get the
+## Cars Collection v.2
+
+Welcome to my final Rails Project! The first version of this application allowed users to create and store a collection of cars. In this new version, the user will also be able to assign a parking space to his/her car. Users are allowed to take the following actions:
+
+  1. Signup for a new account, log in and log out;
+  2. Add/create individual car entries to be saved to a database, and assign a parking space;
+  3. Read/retrieve a car, as well as a list of all cars entered to the database;
+  4. Edit/update only entries made by the current user; and 
+  5. Delete only entries made by the current user.
+
+## Run the Program
+
+To use this app, please follow the following instructions:
+
+  1. Close this repository [ADD REPO HERE] and save it locally;
+  2. Run `bundle install`;
+  3. Run `rake db:migrate`;
+  4. Run `rails s` to start the server; and 
+  5. Type `http://localhost:3000` in your browser to access the server.
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at [ADD REPO HERE]. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
+
+## License
+
+See the LICENSE.md file.
+
+Enjoy!
+
+<!-- This README would normally document whatever steps are necessary to get the
 application up and running.
 
 Things you may want to cover:
@@ -23,3 +53,4 @@ Things you may want to cover:
 
 * ...
 # rails-final-project
+ -->
