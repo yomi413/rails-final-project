@@ -11,11 +11,12 @@ class SessionsController < ApplicationController
       user.email = auth['info']['email']
       user.image = auth['info']['image']
     end
-    # binding.pry
 
     session[:user_id] = @user.id
+
+    redirect_to cars_path
     
-    render 'welcome/home'
+    # render 'welcome/home'
   end
 
   def login
