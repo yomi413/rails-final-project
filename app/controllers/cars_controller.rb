@@ -3,6 +3,11 @@ require 'pry'
 class CarsController < ApplicationController
   
   def index
+    # if params[:user_id]
+    #   @cars = User.find(params[:user_id]).cars
+    # else
+    #   @cars = Car.all
+    # end
     @cars = Car.all
   end
 
@@ -12,7 +17,7 @@ class CarsController < ApplicationController
 
   def create
     @car = current_user.cars.build(car_params)
-
+    # binding.pry
     if @car.save
       redirect_to cars_path
     else
@@ -21,7 +26,8 @@ class CarsController < ApplicationController
   end
 
   def show
-    @car = Car.find_by(id: params[:id])
+    @car = Car.find(params[:id])
+    # @car = Car.find_by(id: params[:id])
   end
 
   def edit
