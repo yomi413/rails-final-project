@@ -13,4 +13,9 @@ class Car < ApplicationRecord
   def your_car
     self.make + " " + self.model + " " + "(" + self.year.to_s + ")"
   end
+
+  def self.recently_created
+    order(created_at: :desc).limit(100)
+  end
+
 end
