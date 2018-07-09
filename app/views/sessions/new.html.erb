@@ -12,3 +12,7 @@
 
   <%= submit_tag "Log In" %>
 <% end %>
+
+<% if flash.now %>
+  <h4><%= flash.now[:error] %></h4>
+<% end %>
