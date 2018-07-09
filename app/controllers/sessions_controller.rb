@@ -14,9 +14,9 @@ class SessionsController < ApplicationController
 
     session[:user_id] = @user.id
 
-    redirect_to cars_path
+    # redirect_to cars_path
     
-    # render 'welcome/home'
+    render 'welcome/home'
   end
 
   def login
@@ -25,6 +25,9 @@ class SessionsController < ApplicationController
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id 
       redirect_to user_path(@user)
+    else
+      flash.now[:error] = "Email and/or password not valid. Please try again."
+      render 'new'
     end
   end
 
