@@ -5,11 +5,12 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    # binding.pry
-    if @user.save 
+
+    if @user.save && !@user.email.empty? && !@user.password.empty?
       session[:user_id] = @user.id
       redirect_to cars_path
     else
+      flash.now[:error] = "Please fill in the blanks. All information is required."
       render 'new'
     end
   end
