@@ -8,7 +8,7 @@ class CarsController < ApplicationController
     # else
     #   @cars = Car.all
     # end
-    @cars = Car.all
+    @cars = Car.recently_created
   end
 
   def new
@@ -17,7 +17,7 @@ class CarsController < ApplicationController
 
   def create
     @car = current_user.cars.build(car_params)
-    # binding.pry
+    
     if @car.save
       redirect_to cars_path
     else
