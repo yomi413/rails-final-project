@@ -1,18 +1,30 @@
 
-  <strong><%= label_tag :make, "Make:" %></strong>
-  <%= text_field_tag :make, @car.make %><br></br>
 
-  <strong><%= label_tag :model, "Model:" %></strong>
-  <%= text_field_tag :model, @car.model %><br></br>
+  <div class="field<%= ' field_with_errors' if @car.errors[:make].any? %>">
+    <strong><%= label_tag :make, "Make:" %></strong>
+    <%= text_field_tag :make, @car.make %><br></br>
+  </div>
 
-  <strong><%= label_tag :year, "Year:" %></strong>
-  <%= number_field_tag :year, @car.year %><br></br>
+  <div class="field<%= ' field_with_errors' if @car.errors[:model].any? %>">
+    <strong><%= label_tag :model, "Model:" %></strong>
+    <%= text_field_tag :model, @car.model %><br></br>
+  </div>
 
-  <strong><%= label_tag :color, "Color:" %></strong>
-  <%= text_field_tag :color, @car.color %><br></br>
+  <div class="field<%= ' field_with_errors' if @car.errors[:year].any? %>">
+    <strong><%= label_tag :year, "Year:" %></strong>
+    <%= number_field_tag :year, @car.year %><br></br>
+  </div>
 
-  <strong><%= label_tag :size, "Size:" %></strong>
-  <%= text_field_tag :size, @car.size %><br></br>
+  <div class="field<%= ' field_with_errors' if @car.errors[:color].any? %>">
+    <strong><%= label_tag :color, "Color:" %></strong>
+    <%= text_field_tag :color, @car.color %><br></br>
+  </div>
+
+  <div class="field<%= ' field_with_errors' if @car.errors[:size].any? %>">
+    <strong><%= label_tag :size, "Size:" %></strong>
+    <%= text_field_tag :size, @car.size %><br></br>
+  </div>
+
 
     
 
