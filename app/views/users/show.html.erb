@@ -1,4 +1,8 @@
 <h1>Welcome, <%= @user.first_name %>!</h1>
+<% if @user.admin %>
+  <h2>ADMIN</h2>
+  <%= link_to "All Registered Cars", cars_path %>
+<% else %>
 
 <p>Number of Registered Cars: <%= @user.cars.count %></p>
 
@@ -27,3 +31,5 @@
   </ul>
 
 <%= link_to "All Registered Cars", cars_path %> | <%= link_to "New Car", new_car_path %> 
+
+<% end %>
