@@ -1,14 +1,18 @@
 <h1>Existing User Log In</h1>
 
 <%= form_tag('/session') do %>
-  
-  <%= label_tag :email, "Email:" %>
-  <%= text_field_tag :email %>
-  <br></br>
 
-  <%= label_tag :password, "Password:" %>
-  <%= text_field_tag :password %>
-  <br></br>
+  <div class="form-group">  
+    <strong><%= label_tag :email, "Email:" %></strong>
+    <%= text_field_tag :email %>
+    <br></br>
+  </div>
+
+  <div class="form-group">
+    <strong><%= label_tag :password, "Password:" %></strong>
+    <%= text_field_tag :password %>
+    <br></br>
+  </div>
 
   <%= submit_tag "Log In" %>
 <% end %>
@@ -16,3 +20,4 @@
 <% if flash.now %>
   <h4><%= flash.now[:error] %></h4>
 <% end %>
+
