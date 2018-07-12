@@ -14,7 +14,7 @@ Welcome to my final Rails Project! The first version of this application allowed
 
 To use this app, please follow the following instructions:
 
-  1. Close this repository [ADD REPO HERE] and save it locally;
+  1. Open this repository https://github.com/yomi413/rails-final-project and save it locally;
   2. Run `bundle install`;
   3. Run `rake db:migrate`;
   4. Run `rails s` to start the server; and 
@@ -22,35 +22,10 @@ To use this app, please follow the following instructions:
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at [ADD REPO HERE]. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/yomi413/rails-final-project. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
 ## License
 
 See the LICENSE.md file.
 
 Enjoy!
-
-<!-- This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# rails-final-project
- -->
