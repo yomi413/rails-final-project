@@ -16,32 +16,30 @@
 <h1>All Cars</h1>
 
 <% if current_user.admin %>
-
+  
   <table>
     <thead>
       <tr>
-        <th>Parking Space Number</th>
         <th>Registered Owner</th>
+        <th>Parking Space Number</th>
         <th>Car Make</th>
         <th>Car Model</th>
         <th>Car Year</th>
         <th>Car Color</th>
         <th>Car Size</th>
-        
       </tr>
     </thead>
 
     <tbody>
       <% @cars.each do |car| %>
         <tr>
-          <td><%= car.parking_space.space_number %></td>
           <td><%= car.user.name %></td>
+          <td><%= car.parking_space.space_number %></td>
           <td><%= car.make %></td>
           <td><%= car.model %></td>
           <td><%= car.year %></td>
           <td><%= car.color %></td>
           <td><%= car.size %></td>
-          
         </tr>
       <% end %>
     </tbody>
@@ -76,8 +74,3 @@
   </table>
 
 <% end %>
-
-
-<br>
-
-<%= link_to "New Car", new_car_path %>
