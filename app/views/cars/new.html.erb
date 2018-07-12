@@ -22,9 +22,9 @@
 
       <strong><%= ps.label :space_number, "Parking Space Number:" %></strong>
 
-        <%= ps.select :space_number, options_for_select((100..125).step(1).to_a.map{|space| ["#{space}", space]}), prompt: "Please choose your parking space number" %>
+      <%= ps.select :space_number, options_for_select((100..125).step(1).to_a.map{|space| ["#{space}", space]}), prompt: "Please choose your parking space" %>
 
-      <% end %>
+    <% end %>
       
     <br></br>
 
