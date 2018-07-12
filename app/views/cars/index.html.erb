@@ -15,33 +15,68 @@
 
 <h1>All Cars</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Registered Owner</th>
-      <th>Car Make</th>
-      <th>Car Model</th>
-      <th>Car Year</th>
-      <th>Car Color</th>
-      <th>Car Size</th>
-      <th>Parking Space Number</th>
-    </tr>
-  </thead>
+<% if current_user.admin %>
 
-  <tbody>
-    <% @cars.each do |car| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= car.user.name %></td>
-        <td><%= car.make %></td>
-        <td><%= car.model %></td>
-        <td><%= car.year %></td>
-        <td><%= car.color %></td>
-        <td><%= car.size %></td>
-        <td><%= car.parking_space.space_number %></td>
+        <th>Parking Space Number</th>
+        <th>Registered Owner</th>
+        <th>Car Make</th>
+        <th>Car Model</th>
+        <th>Car Year</th>
+        <th>Car Color</th>
+        <th>Car Size</th>
+        
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <% @cars.each do |car| %>
+        <tr>
+          <td><%= car.parking_space.space_number %></td>
+          <td><%= car.user.name %></td>
+          <td><%= car.make %></td>
+          <td><%= car.model %></td>
+          <td><%= car.year %></td>
+          <td><%= car.color %></td>
+          <td><%= car.size %></td>
+          
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+<% else %>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Parking Space Number</th>
+        <th>Car Make</th>
+        <th>Car Model</th>
+        <th>Car Year</th>
+        <th>Car Color</th>
+        <th>Car Size</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% current_user.cars.each do |car| %>
+        <tr>
+          <td><%= car.parking_space.space_number %></td>
+          <td><%= car.make %></td>
+          <td><%= car.model %></td>
+          <td><%= car.year %></td>
+          <td><%= car.color %></td>
+          <td><%= car.size %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+<% end %>
+
 
 <br>
 
