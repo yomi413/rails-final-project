@@ -3,7 +3,7 @@ require 'pry'
 class CarsController < ApplicationController
   
   def index
-    @cars = Car.recently_created
+    @cars = Car.registered_owner.recently_created
   end
 
   def new
@@ -22,7 +22,6 @@ class CarsController < ApplicationController
 
   def show
     @car = Car.find(params[:id])
-    # @car = Car.find_by(id: params[:id])
   end
 
   def edit
