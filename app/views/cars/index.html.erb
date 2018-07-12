@@ -21,12 +21,7 @@
     <thead>
       <tr>
         <th>Registered Owner</th>
-        <th>Parking Space Number</th>
-        <th>Car Make</th>
-        <th>Car Model</th>
-        <th>Car Year</th>
-        <th>Car Color</th>
-        <th>Car Size</th>
+        <%= render "index" %>
       </tr>
     </thead>
 
@@ -34,7 +29,7 @@
       <% @cars.each do |car| %>
         <tr>
           <td><%= car.user.name %></td>
-          <td><%= car.parking_space.space_number %></td>
+           <td><%= car.parking_space.space_number %></td>
           <td><%= car.make %></td>
           <td><%= car.model %></td>
           <td><%= car.year %></td>
@@ -50,12 +45,7 @@
   <table>
     <thead>
       <tr>
-        <th>Parking Space Number</th>
-        <th>Car Make</th>
-        <th>Car Model</th>
-        <th>Car Year</th>
-        <th>Car Color</th>
-        <th>Car Size</th>
+        <%= render "index" %>
       </tr>
     </thead>
 
