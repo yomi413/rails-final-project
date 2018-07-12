@@ -3,11 +3,6 @@ require 'pry'
 class CarsController < ApplicationController
   
   def index
-    # if params[:user_id]
-    #   @cars = User.find(params[:user_id]).cars
-    # else
-    #   @cars = Car.all
-    # end
     @cars = Car.recently_created
   end
 
