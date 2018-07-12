@@ -18,4 +18,8 @@ class Car < ApplicationRecord
     order(created_at: :desc).limit(100)
   end
 
+  def self.registered_owner
+    order(user_id: :desc)
+  end
+
 end
