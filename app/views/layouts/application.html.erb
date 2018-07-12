@@ -5,13 +5,18 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <style>
 
       body {
         background-color: lightyellow;
+      }
+
+      .field_with_errors input[type="text"] {
+        padding: 3px 2px;
+        border: 2px solid red;
       }
 
     </style>
