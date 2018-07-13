@@ -2,7 +2,7 @@
 
 ## Cars Collection v.2
 
-Welcome to my final Rails Project! The first version of this application allowed users to create and store a collection of cars. In this new version, the user will also be able to assign a parking space to his/her car. Users are allowed to take the following actions:
+Welcome to my final Rails Project! The first version of this application allowed users to create and store a collection of cars. In this new version, the user will be able continue working on the cars collection, but also be able to assign a parking space to his/her car. Users are allowed to take the following actions:
 
   1. Signup for a new account, log in and log out;
   2. Add/create individual car entries to be saved to a database, and assign a parking space;
@@ -14,11 +14,13 @@ Welcome to my final Rails Project! The first version of this application allowed
 
 To use this app, please follow the following instructions:
 
-  1. Open this repository https://github.com/yomi413/rails-final-project and save it locally;
-  2. Run `bundle install`;
-  3. Run `rake db:migrate`;
-  4. Run `rails s` to start the server; and 
-  5. Type `http://localhost:3000` in your browser to access the server.
+  1. Open this repository https://github.com/yomi413/rails-final-project;
+  2. Clone or download the repository, and save it locally;
+  3. Run `bundle install`;
+  4. Run `rake db:migrate`;
+  5. Run `rake db:seed`;
+  6. Run `rails s` to start the server; and 
+  7. Type `http://localhost:3000` in your browser to access the server.
 
 ## Contributing
 
