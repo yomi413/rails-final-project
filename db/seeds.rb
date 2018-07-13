@@ -16,12 +16,12 @@ alicia.cars.create(:make => "Toyota", :model => "Camry", :year => "2004", :color
 daniel.cars.create(:make => "Volkswagen", :model => "Golf", :year => "2014", :color => "green", :size => "sedan", :parking_space_attributes => {:space_number => parking_spaces.pop})
 daniel.cars.create(:make => "Mercedes", :model => "Benz", :year => "2015", :color => "white", :size => "sedan", :parking_space_attributes => {:space_number => parking_spaces.pop})
 alicia.cars.create(:make => "Nissan", :model => "Sentra", :year => "2012", :color => "gold", :size => "sedan", :parking_space_attributes => {:space_number => parking_spaces.pop})
-daniel.cars.create(:make => "Hyundai", :model => "Santa Fe", :year => "2080", :color => "green", :size => "SUV", :parking_space_attributes => {:space_number => parking_spaces.pop})
+daniel.cars.create(:make => "Hyundai", :model => "Santa Fe", :year => "2008", :color => "green", :size => "SUV", :parking_space_attributes => {:space_number => parking_spaces.pop})
 
 alicia.cars.create(:make => "Honda", :model => "Odyssey", :year => "2010", :color => "black", :size => "minivan", :parking_space_attributes => {:space_number => parking_spaces.pop})
 alicia.cars.create(:make => "Toyota", :model => "Camry", :year => "2004", :color => "blue", :size => "sedan", :parking_space_attributes => {:space_number => parking_spaces.pop})
 daniel.cars.create(:make => "Volkswagen", :model => "Golf", :year => "2014", :color => "green", :size => "sedan", :parking_space_attributes => {:space_number => parking_spaces.pop})
 daniel.cars.create(:make => "Mercedes", :model => "Benz", :year => "2015", :color => "white", :size => "sedan", :parking_space_attributes => {:space_number => parking_spaces.pop})
 alicia.cars.create(:make => "Nissan", :model => "Sentra", :year => "2012", :color => "gold", :size => "sedan", :parking_space_attributes => {:space_number => parking_spaces.pop})
-daniel.cars.create(:make => "Hyundai", :model => "Santa Fe", :year => "2080", :color => "green", :size => "SUV", :parking_space_attributes => {:space_number => parking_spaces.pop})
+daniel.cars.create(:make => "Hyundai", :model => "Santa Fe", :year => "2008", :color => "green", :size => "SUV", :parking_space_attributes => {:space_number => parking_spaces.pop})
 
