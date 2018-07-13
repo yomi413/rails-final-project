@@ -17,8 +17,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    # binding.pry
-    # @user = User.find_by(id: params[:id])
   end
 
   private

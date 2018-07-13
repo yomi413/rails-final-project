@@ -38,7 +38,7 @@ class CarsController < ApplicationController
     @car = current_user.cars.find_by(id: params[:id])
 
     if @car && logged_in?
-      @car.destroy
+      @car.destroy 
       redirect_to cars_path
     end
   end

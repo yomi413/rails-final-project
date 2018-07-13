@@ -4,13 +4,13 @@
   <%= link_to "All Registered Cars", cars_path %>
 <% else %>
 
-<p>Number of Registered Cars: <%= @user.cars.count %></p>
-
-  <% if current_user.cars.empty? %>
+<% if current_user.cars.empty? %>
     <center><h4>No listings available</h4></center>
   <% else %>
     <p>Please click the link that you would like to edit or delete.</p>
   <% end %>
+
+<p>Number of Registered Cars: <%= @user.cars.count %></p>
 
   <ul>
     <% current_user.cars.each do |car| %>
