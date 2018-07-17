@@ -11,7 +11,6 @@ class SessionsController < ApplicationController
       user.email = auth['info']['email']
       user.image = auth['info']['image']
     end
-    # binding.pry
 
     session[:user_id] = @user.id
     
