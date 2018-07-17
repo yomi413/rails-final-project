@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
     if @user.save && !@user.email.empty? && !@user.password.empty?
       session[:user_id] = @user.id
-      redirect_to cars_path
+      redirect_to user_path(@user)
     else
       flash.now[:error] = "Please fill in the blanks. All information is required."
       render 'new'
@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find_by(id: params[:id])
   end
 
   private
