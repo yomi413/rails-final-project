@@ -2,29 +2,21 @@
 
 <%= form_for @user do |f| %>
 
-  <div class="form-group">
-    <strong><%= f.label :name, "Full Name:" %></strong>
-    <%= f.text_field :name %>
-    <br></br>
-  </div>
+  <strong><%= f.label :name, "Full Name:" %></strong>
+  <%= f.text_field :name %>
+  <br></br>
 
-  <div class="form-group">
-    <strong><%= f.label :email, "Email:" %></strong>
-    <%= f.text_field :email %>
-    <br></br>
-  </div>
+  <strong><%= f.label :email, "Email:" %></strong>
+  <%= f.text_field :email %>
+  <br></br>
 
-  <div class="form-group">
-    <strong><%= f.label :password, "Password:" %></strong>
-    <%= f.password_field :password %>
-    <br></br>
-  </div>
+  <strong><%= f.label :password, "Password:" %></strong>
+  <%= f.password_field :password %>
+  <br></br>
 
-  <div class="checkbox">
-    <strong><%= f.label :admin, "Check box if you are an administrator:" %></strong>
-    <%= f.check_box :admin %>
-    <br></br>
-  </div>
+  <strong><%= f.label :admin, "Check box if you are an administrator:" %></strong>
+  <%= f.check_box :admin %>
+  <br></br>
 
   <%= f.submit %>
 <% end %>
