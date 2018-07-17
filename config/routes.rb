@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   resources :parking_spaces
-  resources :users
-  resources :cars
+  resources :users, only: [:new, :create, :show]
+  resources :cars, only: [:index, :new, :create, :show, :edit, :update, :destroy]
 
   resources :users do
-    resources :cars, only: [:index, :show]
+    resources :cars, only: [:new, :index, :show]
   end
 
   root "welcome#home"
