@@ -3,7 +3,7 @@ require 'pry'
 class CarsController < ApplicationController
   
   def index
-    @cars = Car.registered_owner.recently_created
+    @cars = Car.registered_owner
   end
 
   def new
@@ -21,15 +21,15 @@ class CarsController < ApplicationController
   end
 
   def show
-    @car = Car.find(params[:id])
+    @car = current_user.cars.find_by(id: params[:id])
   end
 
   def edit
-    @car = Car.find_by(id: params[:id])
+    @car = current_user.cars.find_by(id: params[:id])
   end
 
   def update
-    @car = Car.find_by(id: params[:id])
+    @car = current_user.cars.find_by(id: params[:id])
     @car.update(car_params)
     redirect_to cars_path
   end
@@ -46,6 +46,15 @@ class CarsController < ApplicationController
   private
 
   def car_params
-    params.permit(:make, :model, :year, :color, :size, parking_space_attributes: [:space_number])
+    params.permit(
+      :make, 
+      :model, 
+      :year, 
+      :color, 
+      :size, 
+      parking_space_attributes: [
+        :space_number
+      ]
+    )
   end
 end
