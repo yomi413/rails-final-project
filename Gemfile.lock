@@ -245,7 +245,7 @@ DEPENDENCIES
   omniauth-google
   omniauth-google-oauth2
   pry
-  puma (~> 3.11)
+  puma (~> 3.12)
   rails (~> 5.2.0)
   sass-rails (~> 5.0)
   selenium-webdriver
